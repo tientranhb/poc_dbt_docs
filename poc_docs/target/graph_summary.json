@@ -1,1 +1,0 @@
-{"_invocation_id": "f2f338be-247e-4a12-b9ff-738264f81525", "linked": {"0": {"name": "model.poc_dbt_docs.model_b", "type": "model"}, "1": {"name": "model.poc_dbt_docs.model_a", "type": "model", "succ": [0]}}}
