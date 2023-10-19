@@ -1,0 +1,9 @@
+name: Publish dbt docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  

@@ -1,0 +1,10 @@
+name: "poc_dbt"
+version: "1.0.0"
+config-version: 2
+
+profile: "postgres"
+
+model-paths: ["models"]
+
+models:
+  schema: public
