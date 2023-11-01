@@ -6,19 +6,11 @@ on:
       - main  # Change to your target branch
 
 jobs:
-  get-changed-folders:
-    runs-on: ubuntu-latest
+  - uses: Stockopedia/action-get-changed-files@v1
+    id: changed
+    with:
+      foldersOnly: true
+      format: json
+  - name: Echo
+    run: echo ${{ steps.get_changed.outputs.changed }}
 
-    steps:
-    - name: Check out the code
-      uses: actions/checkout@v2
-
-    - name: Get changed folders
-      id: changed_folders
-      run: |
-        changed_folders=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | xargs -I {} dirname {})
-        echo "Changed folders: $changed_folders"
-        echo "::set-output name=changed_folders::$changed_folders"
-
-    - name: Use the changed folders in the next step
-      run: echo "The changed folders are ${{ steps.changed_folders.outputs.changed_folders }}"
