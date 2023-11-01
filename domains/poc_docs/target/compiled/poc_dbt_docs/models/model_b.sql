@@ -1,0 +1,1 @@
+SELECT * FROM "postgres"."public_public"."model_a"
