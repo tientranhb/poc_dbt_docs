@@ -3,10 +3,11 @@ logs/
 .DS_Store
 dbt_packages/
 
-target/compiled
-target/run
-target/*.json
+**target/compiled
+**target/run
+**target/*.json
 !target/catalog.json
 !target/manifest.json
-target/*.msgpack
-target/*.gpickle
+**target/*.msgpack
+**target/*.gpickle
+
